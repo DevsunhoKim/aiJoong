@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
-# Define input and target data
+
 x = np.array([[1], [2], [3], [4], [5]])
 y = np.array([2, 4, 5, 4, 5])
 train_input, test_input, train_target, test_target = train_test_split(x, y, test_size=0.2, random_state=42)
