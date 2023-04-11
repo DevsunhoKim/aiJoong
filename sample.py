@@ -1,6 +1,7 @@
 # 필요한 라이브러리를 불러옵니다.
 import pandas as pd
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
