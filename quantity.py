@@ -36,3 +36,6 @@ kmeans = KMeans(n_clusters=5, random_state=0).fit(X)
 labels = kmeans.labels_
 for i, item in enumerate(items):
     print(f'{item}: {labels[i]}')    
+
+
+    # 파이썬 실행 파일화
