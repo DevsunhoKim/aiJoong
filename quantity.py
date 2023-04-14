@@ -35,4 +35,4 @@ kmeans = KMeans(n_clusters=5, random_state=0).fit(X)
 # Print the cluster labels for each item
 labels = kmeans.labels_
 for i, item in enumerate(items):
-    print(f'{item}: {labels[i]}')
+    print(f'{item}: {labels[i]}')    
