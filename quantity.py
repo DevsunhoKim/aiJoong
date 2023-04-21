@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 
 # Read the data from an Excel file
-df = pd.read_excel('data.xlsx', engine='openpyxl')
+df = pd.read_excel('data1.xlsx', engine='openpyxl')
 
 # Normalize text in the 'item' column
 df['item'] = df['item'].str.lower().str.strip()
