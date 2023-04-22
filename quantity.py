@@ -11,24 +11,13 @@ df['item'] = df['item'].str.lower().str.strip()
 # Group by item and sum quantities
 item_counts = df.groupby('item')['quantity'].sum().reset_index()
 
+# Round and convert 'quantity' column to int
+item_counts['quantity'] = item_counts['quantity'].round().astype(int)
+
 # Output the shipment quantity for each item
 for i, row in item_counts.iterrows():
     print(f"{row['item']}: {row['quantity']}")
 
-# Extract the item names
-items = item_counts['item'].tolist()
-
-# Vectorize the item names using the TF-IDF algorithm
-vectorizer = TfidfVectorizer()
-X = vectorizer.fit_transform(items)
-
-# Cluster the items using the k-means algorithm
-kmeans = KMeans(n_clusters=5, random_state=0).fit(X)
-
-# Print the cluster labels for each item
-labels = kmeans.labels_
-for i, item in enumerate(items):
-    print(f'{item}: {labels[i]}')
 
 
     # 파이썬 실행 파일화
