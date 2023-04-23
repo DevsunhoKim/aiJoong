@@ -11,6 +11,9 @@ df['item'] = df['item'].str.lower().str.strip()
 # Group by item and sum quantities
 item_counts = df.groupby('item')['quantity'].sum().reset_index()
 
+# Remove any rows with zero quantity
+item_counts = item_counts[item_counts['quantity'] > 0]
+
 # Round and convert 'quantity' column to int
 item_counts['quantity'] = item_counts['quantity'].round().astype(int)
 
