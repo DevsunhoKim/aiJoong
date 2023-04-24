@@ -5,17 +5,17 @@ from sklearn.cluster import KMeans
 # Read the data from an Excel file
 df = pd.read_excel('data1.xlsx', engine='openpyxl')
 
-# Normalize text in the 'item' column
-df['item'] = df['item'].str.lower().str.strip()
+# Rename columns to 'item' and 'quantity' if needed
+df = df.rename(columns={'아이템': 'item', '수량': 'quantity'})
+
+# Convert 'quantity' column to int
+df['quantity'] = df['quantity'].astype(int)
 
 # Group by item and sum quantities
 item_counts = df.groupby('item')['quantity'].sum().reset_index()
 
 # Remove any rows with zero quantity
 item_counts = item_counts[item_counts['quantity'] > 0]
-
-# Round and convert 'quantity' column to int
-item_counts['quantity'] = item_counts['quantity'].round().astype(int)
 
 # Output the shipment quantity for each item
 for i, row in item_counts.iterrows():
