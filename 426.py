@@ -27,4 +27,6 @@ freq_df = pd.DataFrame(list(freq.items()), columns=['Item', 'Frequency'])
 freq_df.sort_values(by=['Frequency'], ascending=False, inplace=True)
 
 # DataFrame을 'item_frequencies.csv'라는 CSV 파일로 내보냅니다.
-freq_df.to_csv('item_frequencies.csv', index=False)
+freq_df.to_csv('item_frequencies.csv', index=False) 
+
+# 파이썬 터미널 실행 오류
