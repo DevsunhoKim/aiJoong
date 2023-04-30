@@ -31,3 +31,4 @@ freq_df.to_csv('item_frequencies.csv', index=False)
 
 # 파이썬 터미널 실행 오류
 # 코드 점검, 개발 환경 점검 이상 확인  
+# 라이브러리 점검, 실행파일화
