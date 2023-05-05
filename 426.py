@@ -35,3 +35,4 @@ freq_df.to_csv('item_frequencies.csv', index=False)
 # 관리자 권한 , 접근권한 , 더블체크  
 #  
 # 
+#   
