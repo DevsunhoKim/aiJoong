@@ -40,3 +40,4 @@ freq_df.to_csv('item_frequencies.csv', index=False)
 #
 #
 #
+# 터미널 오류 해결
